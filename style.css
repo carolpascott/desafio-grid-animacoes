@@ -12,6 +12,13 @@
 	--ff-title: 'Staatliches', cursive;
 	--ff-texting: 'Palanquin', sans-serif;
 
+	/* var font-size */
+	--fs-hh1: 4.0rem;
+	--fs-txt: 1.7rem;
+
+	/* var line-height */
+	--lh-txt: 2.5rem;
+
 	/* var background and font color */
 	/* new colors, just change --hue */
 	--hue: 218;
@@ -21,6 +28,7 @@
 	--fc-texting:hsl(calc(var(--hue) + 57), 84%, 12%);
 	--fc-h2: hsl(var(--hue), 17%, 35%);
 	--bg-h2: hsl(calc(var(--hue) + 94), 91%, 96%);
+	--fc-footer: var(--fc-h2);
 }
 
 .page {
@@ -39,8 +47,9 @@ header {
 header h1 {
 	font-family: var(--ff-title);
 	font-weight: 400;
-	font-size: 4.0rem;
-	line-height: 3.4rem;
+	font-size: var(--fs-hh1);
+	
+	line-height: 5rem;
 
 	letter-spacing: 0.05em;
 
@@ -48,8 +57,6 @@ header h1 {
 	background: var(--bg-h1);
 
 	text-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.25);
-
-	padding: 0.8rem auto;
 
 	animation: tofront-h1 500ms;
 }
@@ -65,16 +72,17 @@ main {
 	padding-bottom: 6.0rem;
 }
 
-main p {
+p {
 	font-family: var(--ff-texting);
 
 	font-weight: 400;
-	font-size: 1.7rem;
-	line-height: 2.5rem;
+	font-size: var(--fs-txt);
+	line-height: var(--lh-txt);
 
 	text-align: center;
-
 	color: var(--fc-texting);
+	padding-left: 3rem;
+	padding-right: 3rem;
 }
 
 .card {
@@ -83,7 +91,7 @@ main p {
 	position: relative;
 }
 
-.card:nth-child(2) {
+main div:nth-child(2) {
 	margin-top: 6.4rem;
 }
 
@@ -129,6 +137,12 @@ main p {
 	opacity: 0.8;
 }
 
+footer, 
+.complet-text,
+main div:nth-child(6),
+main div:nth-child(7) {
+	  display: none;
+}
 
 @keyframes tofront-img {
 	0% {
@@ -167,4 +181,118 @@ main p {
 		opacity: 1;
 		transform: translateY(0);
 	}
+}
+
+/* *************************************** */
+/* *********** desktop version *********** */
+/* *************************************** */
+
+
+@media (min-width: 700px) {
+	:root {
+				
+		--ff-texting: 'Roboto', sans-serif;
+		--ff-footer: 'Open Sans', sans-serif;
+		
+		--fs-hh1: 4.8rem;
+		--fs-txt: 1.6rem;
+		--fs-foo: 1.4rem;
+
+		--lh-txt: 2.5rem;
+		--lh-foo: 2.8rem;
+			
+		--fc-texting: var(--fc-h1);			
+	}
+
+	footer, 
+	.complet-text,
+	main div:nth-child(6),
+	main div:nth-child(7) {
+		display: block;
+	}
+
+	main p,
+	.card h2 {
+		display: none;
+	}
+
+	.page {
+		max-width: 128rem;
+		display: flex;
+	}
+
+	header {
+		width: 37.7rem;
+		height: auto;
+
+		padding-bottom: 3rem;
+	}
+
+	header h1 {
+		line-height: 7rem;
+		
+		margin-bottom: 3.2rem;
+	}	
+
+	main {
+		margin: 6.4rem 8.0rem 5.0rem 10rem;
+		padding: 0;
+
+		display: grid;
+		grid-auto-rows: min-content;
+		grid-template-areas: 
+			"card1 card2 card5" 
+			"card4 card2 card6" 
+			"card4 card3 card6"
+			"footer footer footer";
+			
+			gap: 3.2rem;
+	}
+
+	main div:nth-child(2) {
+		grid-area: card1;
+		margin-top: 0;
+	}
+
+	main div:nth-child(3) {
+		grid-area: card2;
+	}
+
+	main div:nth-child(4) {
+		grid-area: card3;
+	}
+
+	main div:nth-child(5) {
+		grid-area: card4;
+	}
+
+	main div:nth-child(6) {
+		grid-area: card5;
+	}
+
+	main div:nth-child(7) {
+		grid-area: card6;
+	}
+
+	.card {
+		margin: 0;
+		padding: 0;
+	}
+	
+	footer {
+		grid-area: footer; 
+		flex-direction: row;
+		text-align: center;
+
+		font-family: var(--ff-footer);
+		font-size: var(--fs-foo);
+		line-height: var(--lh-foo);
+		color: var(--fc-footer);
+
+		margin-top: 1.8rem;
+	}
+
+	footer span {
+		font-weight: bold;
+	}	
 }
