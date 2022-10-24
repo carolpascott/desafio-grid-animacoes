@@ -1,7 +1,7 @@
 # Desafio grig com animações
 
 <h3> Versão desktop do desafio mobile first </h3>
-![preview](/image/preview_desktop.jpeg)
+![preview](./image/preview_desktop.jpeg)
 
 <h3> Versão mobile</h3>
 ![preview](./image/preview.jpeg)
