@@ -1,21 +1,21 @@
-# Desafio grig com animações
+# Challenge: Grid with Animations
 
-> Trilha Explorer, Stage 03
+> Explorer, Stage 03
 
-<h3> Versão desktop do desafio mobile first </h3>
+<h3> Desktop version </h3>
 
 <img src="https://github.com/carolpascott/desafio-grid-animacoes/blob/main/image/preview_desktop.jpeg?raw=true">
 
-<h3> Versão mobile</h3>
+<h3> Mobile version</h3>
 <img src="https://github.com/carolpascott/desafio-grid-animacoes/blob/main/image/preview.jpeg?raw=true">
 
 
-[Clique aqui para acessar](https://carolpascott.github.io/desafio-grid-animacoes/)
+[Click here to access](https://carolpascott.github.io/desafio-grid-animacoes/)
 
-## Tecnologias
+## Technologies
 - HTML
 - CSS
 - Github
 
-## Contato
+## Contact
 carolpascott01@gmail.com
